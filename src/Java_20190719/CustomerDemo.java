@@ -25,6 +25,9 @@ public class CustomerDemo {
 		c2.balance = 45_000_000_000.24;
 		c2.isReleased = true;
 		
+		Customer c3 = c2; //c2가 가리키는 곳을 c3도 가리켜달라
+		c3.age = 70;
+		
 		System.out.printf("%s,%d,%s,%s,%,.2f,%s",
 				c2.name,c2.age,c2.email,c2.phone,c2.balance,c2
 				.isReleased);
