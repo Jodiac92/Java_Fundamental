@@ -28,7 +28,7 @@ public class TwoArrayDemo {
 			System.out.println(temp);
 		}
 		
-		ㄴ
+	
 	}
 
 }
