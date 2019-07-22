@@ -6,7 +6,7 @@ package Java_20190715;
 public class IdentifierDemo {
 	public static void main(String[] args) {
 		int age = 10;
-		String name = "Hello"
+		String name = "Hello";
 		//첫글자로 숫자를 사용할 수 없음
 		//String 1fathername = "John";
 		//공백을 사용할 수 없음
