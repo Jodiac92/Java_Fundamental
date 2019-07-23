@@ -1,6 +1,6 @@
-package Java_20190718;
+package Java_20190716;
 
-public class CalenderDemo {
+public class CalendarDemo {
 	public static void main(String[] args) {
 		/*
 		
@@ -12,9 +12,9 @@ public class CalenderDemo {
 		5. 2018년까지 총일수, 11월까지 총일수, 25일 더해서 7로 나눈 나머지가 1이면 월요일 2이면 화요일...
 		*/
 		
-		int year = 2019;
-		int month = 12;
-		int day = 25;
+		int year = 2020;
+		int month = 3;
+		int day = 15;
 		//preYear => 2018년도
 		int preYear = year - 1;
 		//preMonth => 2019년도 11월
@@ -24,16 +24,8 @@ public class CalenderDemo {
 		//2018년도까지 총 일수 구하기
 		totalCount = preYear * 365 + (preYear/4 - preYear/100 + preYear/400);
 		
-		int[] monthArray = {31,28,31,30,31,30,31,31,30,31,30,31,};
-		
-		boolean isLeafYear = year%4==0 && (year%100 !=0 || year%400==0); //!=0 0이 아닐때
-		//if(year%4==0 && (year%100 !=0 || year%400==0)) {
-		//}
-		
 		//2019년도  11월까지 합 구하기
-		for(int i=0;i<preMonth;i++) {
-			totalCount += monthArray[i]; // a=a+b
-		}
+		totalCount += 31 + 29;
 		
 		totalCount += day;
 		
