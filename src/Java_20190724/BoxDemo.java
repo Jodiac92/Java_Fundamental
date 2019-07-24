@@ -32,3 +32,4 @@ public class BoxDemo {
 		System.out.printf("width : %d, height : %d, depth : %d", b1.width, b1.height, b1.depth);
 	}
 }
+//계산하면 왜 3010이 나오나? 어디서?

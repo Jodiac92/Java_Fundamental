@@ -18,5 +18,6 @@ public class EmployeeDemo {
 
 		Customer c1 = e1.change(e1);
 		System.out.println(e1.name);
+		System.out.println(e1.phone1);
 	}
 }
