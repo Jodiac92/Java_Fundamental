@@ -22,7 +22,7 @@ public class PrimeNumber {
 				System.out.print(i + "\t");
 			}
 		}
-			System.out.println();
+		    System.out.println();
 			System.out.printf("소수의 갯수 : %s%n", count);
 	}
 		
