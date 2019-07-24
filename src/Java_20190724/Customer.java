@@ -1,5 +1,8 @@
 package Java_20190724;
 
-public class Customer {
-
+public class Customer{
+	String name;
+	String phone1;
+	String phone2;
+	String phone3;
 }
