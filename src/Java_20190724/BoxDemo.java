@@ -5,8 +5,8 @@ public class BoxDemo {
 	static int b;
 	public static void main(String[] args) {
 		b = 20;
-		BoxDemo.b = 20;
-		BoxDemo b= new BoxDemo(); //객체생성
+		BoxDemo.b = 30;
+		BoxDemo b = new BoxDemo(); //객체생성
 		b.a = 10;
 		//Box.NAME = "Box2";
 		
@@ -25,11 +25,10 @@ public class BoxDemo {
 		// b1==b2 => reference비교일때에는 b1과 b2가 같은 오브젝트를 참조하면 true, 그렇지 않으면 false
 		System.out.println(b3==b2);
 		
-		System.out.printf("width : %d, height : %d, depth : %d", b1.width, b1.height, b1.depth);
+		System.out.printf("width : %d, height : %d, depth : %d%n", b1.width, b1.height, b1.depth);
 		
 		b1.change(b1);//call by reference
 		
-		System.out.printf("width : %d, height : %d, depth : %d", b1.width, b1.height, b1.depth);
+		System.out.printf("width : %d, height : %d, depth : %d%n", b1.width, b1.height, b1.depth);
 	}
 }
-//계산하면 왜 3010이 나오나? 어디서?
