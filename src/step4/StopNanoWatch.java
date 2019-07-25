@@ -1,4 +1,4 @@
-package Java_20190725.step3;
+package step4;
 
 public class StopNanoWatch {
 	long startTime;
@@ -9,10 +9,8 @@ public class StopNanoWatch {
 	}
 	public void stop() {
 		endTime = System.nanoTime();
-	}	
-
+	}
 	public double getElapsedTime() {
 		return (double)(endTime - startTime)/(double)1000000000;
 	}
 }
-

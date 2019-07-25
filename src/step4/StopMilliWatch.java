@@ -1,16 +1,15 @@
-package Java_20190725.step4;
+package step4;
 
 public class StopMilliWatch {
 	long startTime;
 	long endTime;
-	
 	public void start() {
 		startTime = System.currentTimeMillis();
 	}
 	public void stop() {
 		endTime = System.currentTimeMillis();
 	}
-		public double getElapsedTime() {
+	public double getElapsedTime() {
 		return (double)(endTime - startTime)/(double)1000;
 	}
 }
