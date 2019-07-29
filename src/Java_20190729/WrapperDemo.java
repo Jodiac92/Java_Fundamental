@@ -25,7 +25,7 @@ public class WrapperDemo {
 		//3. Wrapper class = primitive data type
 		int temp = i2.intValue() + i3.intValue();
 		
-		//4. String => primitive data type(Integer.parseInt);***
+		//4. String => primitive data type(Integer.parseInt);***문자를 나열할 때 사용
 		temp = Integer.parseInt(s1) + Integer.parseInt(s2);
 		
 		//5. primitive data type => String
