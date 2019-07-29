@@ -15,7 +15,9 @@ public class ArrayDemo {
 		int sum = 0;
 		for(int i=0 ;i<a.length ; i++) {
 			int temp = a[i];
+			
 			sum += temp;
+			
 			System.out.println(temp);
 		}
 		
