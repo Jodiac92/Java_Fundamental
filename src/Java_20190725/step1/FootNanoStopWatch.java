@@ -1,4 +1,4 @@
-package step1;
+package Java_20190725.step1;
 //1. 요구상은 밀리 세컨드로 경과 시간을 만들어주세요....
 public class FootNanoStopWatch {
 	long startTime;

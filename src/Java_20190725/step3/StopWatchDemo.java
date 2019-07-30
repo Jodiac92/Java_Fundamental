@@ -1,8 +1,8 @@
-package step2;
+package Java_20190725.step3;
 
 public class StopWatchDemo {
 	public static void main(String[] args) {
-		StopWatch s1 = new StopWatch();
+		StopNanoWatch s1 = new StopNanoWatch();
 		//currentTimeMillis() => 
 		//1970 1 1일부터 지금까지 시간을 밀리세컨드로 반환한다.
 		s1.start();
@@ -12,6 +12,6 @@ public class StopWatchDemo {
 		s1.stop();
 		
 		double elapsedTime = s1.getElapsedTime();
-		System.out.printf("경과시간 : %.3f", elapsedTime);
+		System.out.printf("경과시간 : %.9f", elapsedTime);
 	}
 }

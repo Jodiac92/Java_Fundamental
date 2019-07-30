@@ -1,6 +1,6 @@
-package step5;
+package Java_20190725.step5;
 
-public class StopNanoWatch  extends StopWatch {
+public class StopMicroWatch  extends StopWatch {
 	
 	public void start() {
 		startTime = System.nanoTime();
@@ -19,6 +19,6 @@ public class StopNanoWatch  extends StopWatch {
 		stop();
 		
 		double elapsedTime = getElapsedTime();
-		System.out.printf("경과시간 : %.9f", elapsedTime);
+		System.out.printf("경과시간 : %.6f", elapsedTime);
 	}
 }

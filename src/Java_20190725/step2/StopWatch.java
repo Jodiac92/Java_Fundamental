@@ -1,4 +1,4 @@
-package step2;
+package Java_20190725.step2;
 
 public class StopWatch {
 	long startTime;
