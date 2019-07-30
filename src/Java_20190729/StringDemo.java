@@ -55,10 +55,63 @@ public class StringDemo {
 		System.out.println(second);
 		
 		String html = "안녕하세요\n저는 성영한입니다.\n잘 부탁드립니다.";
+		//replaceAll(String first, String second)
+		//first 문자열을 second 문자열로 대체한다.
 		html = html.replaceAll("\n", "<br>");
 		System.out.println(html);
 		
 		
+		String url = "http://www.naver.com";
+		String path = "/news";
+		//startsWith(String msg) msg문자열로 시작하면 true, or false
+		if(path.startsWith("/news")){
+			System.out.println("뉴스 페이지입니다.");
+		}else if(path.startsWith("/sports")){
+			System.out.println("스포츠 페이지입니다.");
+		}else {
+			System.out.println("페이지가 존재하지 않습니다.");
+		}
 		
+		String m1 = "hello";
+		String m2 = "hello ";
+		
+		System.out.println(m1);
+		System.out.println(m2);
+		if(m1.equals(m2)) {
+			System.out.println("true");
+		}else {
+			System.out.println("false");
+		}
+		
+		//toUpperCase() 대문자로 변환
+		m1 = m1.toUpperCase();
+		System.out.println(m1);
+		
+		//toLowerCase() 소문자로 변환
+		m1 = m1.toLowerCase();
+		System.out.println(m1);
+		
+		//String.valueOf() : primitive data type을 문자열로 변환한다.
+		int a = 10;
+		String str = String.valueOf(a);
+		System.out.println(a);
+		
+		char[] c1 = {'a', 'b', 'c'};
+		String str1 = String.valueOf(c1);
+		System.out.println(c1);
+		
+		//ssn : 111111-111118                //11111토큰-구분자111118토큰
+		//split(String delimiter)
+		//문자열을 구분자(delimiter)로 토큰(token)화 시키는 메서드 
+		String[] strArray = ssn.split("-");  // ex)"111#222#333 => 숫자=토큰, #=구분자
+		System.out.println(strArray[0]);
+		System.out.println(strArray[1]);
+		
+		String str2 = String.format("%,d", 1000000); //d는 decimal
+		System.out.println(str2);
+		
+		str2 = String.format("%,.2f", 1234.12423); //f는 float
+		System.out.println(str2);
 	}
+	
 }
