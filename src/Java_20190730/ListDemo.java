@@ -37,7 +37,7 @@ public class ListDemo {
 		Product p10 = new Product(1,"terran",2500);	
 		Product p11 = new Product(1,"terran",2500);		
 		Product p12 = new Product(1,"terran",2500);
-		
+
 		
 		list.add(p1);//할당
 		list.add(p2);//할당
@@ -59,6 +59,13 @@ public class ListDemo {
 		//enhanced for loop(출력 가능 제너릭으로 선언한 경우만 가능)
 		for (Product product : list) {
 			System.out.println(product);
-		}
+			}
 	}
 }
+		//for(Product product : list){
+			//if(product.number == 3) {
+				//Product.price = 3500;
+			//}
+		//}
+	//}
+
