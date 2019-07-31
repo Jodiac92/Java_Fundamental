@@ -4,80 +4,57 @@ import java.util.Calendar;
 
 // one line comment
 /*
+ multi line comment
  
-  multi line comment
  */
 //java docs comment
 /**
- Calendar 클래스는 년도별,월별, 요일을 구할 수 있는 클래스입니다.
+ Calendar 클래스는 년도별, 월별, 요일을 구할 수 있는 클래스 입니다. 
  */
-
-
 public class Calendar2 {
-
+	
 	/**
-	  매개변수에 년도로 호출하면 해당 년도의 월 별 달력을 출력하는 기능입니다.
+	 매개변수에 년도로 호출하면 해당 년도의 월 별 달력을 출력하는 기능입니다.
 	 */
 	public void print(int year) {
-		for(int i=1;i<=12;i++) {
-			if(i%2 == 1) {
-			print(year,i);
-		System.out.println(year);
-	}
+		for (int i = 1; i <= 12; i++) {
+			print(year, i);
 		}
-}
+	}
 	/**
-	  매개변수에 년도와 월로 호출하면 해당 년도의 월 달력을 출력하는 기능입니다.
+	 매개변수에 년도와 월로 호출하면 해당 년도의 월 달력을 출력하는 기능입니다.
 	 */
-	
-		/*
+	public void print(int year, int month) {
+		Calendar c = Calendar.getInstance();
+		c.set(year, month-1, 1);
 		System.out.println("일\t월\t화\t수\t목\t금\t토");
 		// 들여쓰기 기능
 		// 2019 7 1 => 총 날짜를 구한다.
-		int totalCount = getCount(year, month, 1);
-		int rest = totalCount % 7;//2019 7 1
-		for(int i=0;i<rest;i++) {
+		int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+		for (int i = 1; i < dayOfWeek; i++) {
 			System.out.print("\t");
 		}
-		
-		for (int i = 1; i <= getLastDay(year, month); i++) {
+
+		for (int i = 1; i <= c.getActualMaximum(Calendar.DATE); i++) {
 			System.out.print(i + "\t");
-			if(rest%7 == Calendar.SATURDAY) {
+			if (dayOfWeek % 7 == 0) {
 				System.out.println();
 			}
-			rest++;
+			dayOfWeek++;
 			// 개행
 		}
-		
+
 		System.out.println();
-         */
-	}
-	 /**
-	  매개변수에 년, 월, 일로 호출하면 요일을 출력하는 기능입니다.
-	  */
-	public void print(int year, int month) {
-	int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
-	for(int i=1;i < dayOfWeek;i++) {
-		System.out.print("\t");
-	}
-	
-	for(int i = 1; i <= c.getActualMaximum(Calendar.DATE);i++) {
-		System.out.print(i + "\t");
-		if(dayOfWeek%7 == Calendar.SATURDAY) {
-			System.out.println();
-		}
-		dayOfWeek++;
-		// 개행
-	}
-	
-	System.out.println();
+		
 
-
+	}
+	/**
+	매개변수에 년, 월, 일로 호출하면 요일을 출력하는 기능입니다.
+	*/
 	public void print(int year, int month, int day) {
 		Calendar c = Calendar.getInstance();
 		c.set(year, month-1, day);
-		
-		
+
 		int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 		String message = null;
 		if (dayOfWeek == Calendar.MONDAY) {
