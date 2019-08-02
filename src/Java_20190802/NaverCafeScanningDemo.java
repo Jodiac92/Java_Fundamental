@@ -28,12 +28,6 @@ public class NaverCafeScanningDemo {
 			pw.write(readLine);
 			
 		}
-		if(is != null) is.close();
-		if(isr != null) isr.close();
-		if(br != null) br.close();
-		if(fw != null) fw.close();
-		//if(bw != null) bw.close();
-		if(pw != null) pw.close();
-		
+
 	}
 }
