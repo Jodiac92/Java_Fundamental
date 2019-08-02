@@ -14,6 +14,7 @@ public class CalendarDemo {
 		int second = c.get(Calendar.SECOND);
 		System.out.printf("%d년%d월%d일%d시0%d분%d초%n",year,month,day,hour,minute,second);
 		
+	
 		c.set(2019, 6, 1);
 		int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 		
