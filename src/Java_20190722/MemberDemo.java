@@ -17,6 +17,9 @@ public class MemberDemo {
 		System.out.println(m.getAge());
 		System.out.println(m.getSsn1());
 		System.out.println(m.getRegdate());
+		
+		m.setName("조현기");
+		String a1 = m.getName();
 	
 	}
 }

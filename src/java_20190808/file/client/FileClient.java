@@ -1,4 +1,4 @@
-package Java_20190807.echo.client;
+package java_20190808.file.client;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -10,11 +10,11 @@ import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class EchoClient2 {
+public class FileClient {
 	private String ip;
 	private int port;
 
-	public EchoClient2(String ip, int port) {
+	public FileClient(String ip, int port) {
 		this.ip = ip;
 		this.port = port;
 	}
@@ -25,27 +25,27 @@ public class EchoClient2 {
 		OutputStreamWriter osw = null;
 		BufferedWriter bw = null;
 		InputStream in = null;
-		
 		FileOutputStream fos = null;
 		try {
-			// ip의 port로 서버와 접속을 시도한다.
-			// 3.소켓을 생성한다.
-			// 4.서버와 연결을 한다.
-				
+			// ip와 port로 서버와 접속을 시도한다.
+			// 3. 소켓을 생성한다.
+			// 4. TCP서버와 연결한다.
+			socket = new Socket(ip, port);
 
-			// 6.소켓으로 출력스트림을 생성한 후에 서버에게 메세지를 보낸다.
+			// 6. 소켓 출력스트림을 생성한다.
 			out = socket.getOutputStream();
 			osw = new OutputStreamWriter(out);
 			bw = new BufferedWriter(osw);
-			bw.write("java-11.pdf");
+
+			bw.write("mariadb.pdf");
 			bw.newLine();
 			bw.flush();
 
-			// 9.소켓으로 입력스트림을 생성한 후에 서버에서 보낸 메세지를 읽는다.
+			// 9. 서버에서 보낸 메세지를 입력스트림으로 받는다.
 			in = socket.getInputStream();
-			File f = new File("c:\\dev\\test\\network");
+			File f = new File("C:\\dev\\test\\network");
 			f.mkdirs();
-			f = new File(f, "java-11.pdf");
+			f = new File(f, "mariadb.pdf");
 			fos = new FileOutputStream(f);
 			byte[] readBytes = new byte[1024 * 8];
 			int readByteCount = 0;
@@ -53,11 +53,9 @@ public class EchoClient2 {
 				fos.write(readBytes, 0, readByteCount);
 			}
 		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("서버 주소가 잘못되었습니다.");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("서버가 열려있지 않습니다.");
 		} finally {
 			try {
 				if (out != null)
@@ -80,6 +78,6 @@ public class EchoClient2 {
 	}
 
 	public static void main(String[] args) {
-		new EchoClient2("192.168.0.52", 4000).run();
+		new FileClient("192.168.0.52", 4000).run();
 	}
 }
