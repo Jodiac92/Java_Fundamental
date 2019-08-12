@@ -54,7 +54,7 @@ public class BufferedInputOutputStreamDemo {
 			
 			
 			fis = new FileInputStream("c:\\dev\\test\\son.jpg");
-			fos = new FileOutputStream("c:\\\\dev\\\\test\\\\son-copy.jpg");
+			fos = new FileOutputStream("c:\\dev\\test\\son-copy.jpg");
 			
 			int readByteCount = 0;
 			byte[] readBytes = new byte[8192];
