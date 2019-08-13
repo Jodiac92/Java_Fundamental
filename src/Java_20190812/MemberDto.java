@@ -1,6 +1,6 @@
 package Java_20190812;
 
-public class MemberDto {
+public class MemberDto { //delete update select insert
 	private int num;
 	private String name;
 	private String addr;
