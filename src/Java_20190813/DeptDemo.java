@@ -12,6 +12,7 @@ public class DeptDemo {
 		}else {
 			System.out.println("오류");
 		}
+		
 		isSuccess = dao.update(new DeptDto(51,"개발부","서초역"));
 		if(isSuccess) {
 			System.out.println("부서가 수정 되었습니다");
